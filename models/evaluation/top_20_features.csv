@@ -1,0 +1,21 @@
+feature,importance
+Days for shipment (scheduled),0.22730833930537733
+Shipping Mode_Standard Class,0.18854951008476237
+Shipping Mode_Second Class,0.04238451126902728
+Customer Segment_Home Office,0.0355926820528282
+Customer Segment_Corporate,0.034384135100333016
+Shipping Mode_Same Day,0.0339710823161215
+Customer State_PR,0.013270175182926194
+Customer State_CA,0.010537359159225887
+Category Name_Cleats,0.009834062230611507
+Customer State_NY,0.00948130037872031
+Category Name_Men's Footwear,0.009391508694284966
+Category Name_Indoor/Outdoor Games,0.009317862973764768
+Category Name_Water Sports,0.00853395199599025
+Customer State_TX,0.008502927794513336
+Department Name_Fan Shop,0.008499310927106984
+Category Name_Fishing,0.008375457489701425
+Category Name_Camping & Hiking,0.00809018284463381
+Customer State_FL,0.007191164708183974
+Customer State_IL,0.007165359937323831
+Customer State_OH,0.006921147763064853

@@ -1,0 +1,594 @@
+{
+  "total_shipments": 172765,
+  "late_shipments": 98977,
+  "on_time_shipments": 73788,
+  "late_rate": 57.29,
+  "shipping_mode": [
+    {
+      "name": "First Class",
+      "shipments": 26513,
+      "late_shipments": 26513,
+      "on_time_shipments": 0
+    },
+    {
+      "name": "Same Day",
+      "shipments": 9293,
+      "late_shipments": 4454,
+      "on_time_shipments": 4839
+    },
+    {
+      "name": "Second Class",
+      "shipments": 33806,
+      "late_shipments": 26987,
+      "on_time_shipments": 6819
+    },
+    {
+      "name": "Standard Class",
+      "shipments": 103153,
+      "late_shipments": 41023,
+      "on_time_shipments": 62130
+    }
+  ],
+  "market": [
+    {
+      "name": "Africa",
+      "shipments": 11154,
+      "late_shipments": 6340,
+      "on_time_shipments": 4814
+    },
+    {
+      "name": "Europe",
+      "shipments": 48090,
+      "late_shipments": 27743,
+      "on_time_shipments": 20347
+    },
+    {
+      "name": "LATAM",
+      "shipments": 49309,
+      "late_shipments": 28044,
+      "on_time_shipments": 21265
+    },
+    {
+      "name": "Pacific Asia",
+      "shipments": 39585,
+      "late_shipments": 22712,
+      "on_time_shipments": 16873
+    },
+    {
+      "name": "USCA",
+      "shipments": 24627,
+      "late_shipments": 14138,
+      "on_time_shipments": 10489
+    }
+  ],
+  "order_region": [
+    {
+      "name": "Canada",
+      "shipments": 907,
+      "late_shipments": 468,
+      "on_time_shipments": 439
+    },
+    {
+      "name": "Caribbean",
+      "shipments": 7951,
+      "late_shipments": 4415,
+      "on_time_shipments": 3536
+    },
+    {
+      "name": "Central Africa",
+      "shipments": 1616,
+      "late_shipments": 972,
+      "on_time_shipments": 644
+    },
+    {
+      "name": "Central America",
+      "shipments": 27174,
+      "late_shipments": 15518,
+      "on_time_shipments": 11656
+    },
+    {
+      "name": "Central Asia",
+      "shipments": 542,
+      "late_shipments": 306,
+      "on_time_shipments": 236
+    },
+    {
+      "name": "East Africa",
+      "shipments": 1781,
+      "late_shipments": 1036,
+      "on_time_shipments": 745
+    },
+    {
+      "name": "East of USA",
+      "shipments": 6617,
+      "late_shipments": 3849,
+      "on_time_shipments": 2768
+    },
+    {
+      "name": "Eastern Asia",
+      "shipments": 6973,
+      "late_shipments": 3955,
+      "on_time_shipments": 3018
+    },
+    {
+      "name": "Eastern Europe",
+      "shipments": 3785,
+      "late_shipments": 2182,
+      "on_time_shipments": 1603
+    },
+    {
+      "name": "North Africa",
+      "shipments": 3086,
+      "late_shipments": 1762,
+      "on_time_shipments": 1324
+    },
+    {
+      "name": "Northern Europe",
+      "shipments": 9408,
+      "late_shipments": 5292,
+      "on_time_shipments": 4116
+    },
+    {
+      "name": "Oceania",
+      "shipments": 9733,
+      "late_shipments": 5482,
+      "on_time_shipments": 4251
+    },
+    {
+      "name": "South America",
+      "shipments": 14184,
+      "late_shipments": 8111,
+      "on_time_shipments": 6073
+    },
+    {
+      "name": "South Asia",
+      "shipments": 7455,
+      "late_shipments": 4350,
+      "on_time_shipments": 3105
+    },
+    {
+      "name": "South of  USA",
+      "shipments": 3855,
+      "late_shipments": 2256,
+      "on_time_shipments": 1599
+    },
+    {
+      "name": "Southeast Asia",
+      "shipments": 9136,
+      "late_shipments": 5297,
+      "on_time_shipments": 3839
+    },
+    {
+      "name": "Southern Africa",
+      "shipments": 1100,
+      "late_shipments": 617,
+      "on_time_shipments": 483
+    },
+    {
+      "name": "Southern Europe",
+      "shipments": 9030,
+      "late_shipments": 5129,
+      "on_time_shipments": 3901
+    },
+    {
+      "name": "US Center",
+      "shipments": 5653,
+      "late_shipments": 3252,
+      "on_time_shipments": 2401
+    },
+    {
+      "name": "West Africa",
+      "shipments": 3571,
+      "late_shipments": 1953,
+      "on_time_shipments": 1618
+    },
+    {
+      "name": "West Asia",
+      "shipments": 5746,
+      "late_shipments": 3322,
+      "on_time_shipments": 2424
+    },
+    {
+      "name": "West of USA",
+      "shipments": 7595,
+      "late_shipments": 4313,
+      "on_time_shipments": 3282
+    },
+    {
+      "name": "Western Europe",
+      "shipments": 25867,
+      "late_shipments": 15140,
+      "on_time_shipments": 10727
+    }
+  ],
+  "customer_segment": [
+    {
+      "name": "Consumer",
+      "shipments": 89420,
+      "late_shipments": 51248,
+      "on_time_shipments": 38172
+    },
+    {
+      "name": "Corporate",
+      "shipments": 52528,
+      "late_shipments": 29982,
+      "on_time_shipments": 22546
+    },
+    {
+      "name": "Home Office",
+      "shipments": 30817,
+      "late_shipments": 17747,
+      "on_time_shipments": 13070
+    }
+  ],
+  "category_name": [
+    {
+      "name": "Accessories",
+      "shipments": 1697,
+      "late_shipments": 1014,
+      "on_time_shipments": 683
+    },
+    {
+      "name": "As Seen on  TV!",
+      "shipments": 66,
+      "late_shipments": 39,
+      "on_time_shipments": 27
+    },
+    {
+      "name": "Baby",
+      "shipments": 198,
+      "late_shipments": 109,
+      "on_time_shipments": 89
+    },
+    {
+      "name": "Baseball & Softball",
+      "shipments": 607,
+      "late_shipments": 349,
+      "on_time_shipments": 258
+    },
+    {
+      "name": "Basketball",
+      "shipments": 64,
+      "late_shipments": 37,
+      "on_time_shipments": 27
+    },
+    {
+      "name": "Books",
+      "shipments": 391,
+      "late_shipments": 229,
+      "on_time_shipments": 162
+    },
+    {
+      "name": "Boxing & MMA",
+      "shipments": 402,
+      "late_shipments": 238,
+      "on_time_shipments": 164
+    },
+    {
+      "name": "CDs",
+      "shipments": 263,
+      "late_shipments": 141,
+      "on_time_shipments": 122
+    },
+    {
+      "name": "Cameras",
+      "shipments": 562,
+      "late_shipments": 344,
+      "on_time_shipments": 218
+    },
+    {
+      "name": "Camping & Hiking",
+      "shipments": 13157,
+      "late_shipments": 7487,
+      "on_time_shipments": 5670
+    },
+    {
+      "name": "Cardio Equipment",
+      "shipments": 11948,
+      "late_shipments": 6805,
+      "on_time_shipments": 5143
+    },
+    {
+      "name": "Children's Clothing",
+      "shipments": 622,
+      "late_shipments": 348,
+      "on_time_shipments": 274
+    },
+    {
+      "name": "Cleats",
+      "shipments": 23514,
+      "late_shipments": 13496,
+      "on_time_shipments": 10018
+    },
+    {
+      "name": "Computers",
+      "shipments": 425,
+      "late_shipments": 224,
+      "on_time_shipments": 201
+    },
+    {
+      "name": "Consumer Electronics",
+      "shipments": 409,
+      "late_shipments": 238,
+      "on_time_shipments": 171
+    },
+    {
+      "name": "Crafts",
+      "shipments": 458,
+      "late_shipments": 271,
+      "on_time_shipments": 187
+    },
+    {
+      "name": "DVDs",
+      "shipments": 459,
+      "late_shipments": 259,
+      "on_time_shipments": 200
+    },
+    {
+      "name": "Electronics",
+      "shipments": 3024,
+      "late_shipments": 1770,
+      "on_time_shipments": 1254
+    },
+    {
+      "name": "Fishing",
+      "shipments": 16595,
+      "late_shipments": 9516,
+      "on_time_shipments": 7079
+    },
+    {
+      "name": "Fitness Accessories",
+      "shipments": 296,
+      "late_shipments": 176,
+      "on_time_shipments": 120
+    },
+    {
+      "name": "Garden",
+      "shipments": 466,
+      "late_shipments": 270,
+      "on_time_shipments": 196
+    },
+    {
+      "name": "Girls' Apparel",
+      "shipments": 1137,
+      "late_shipments": 664,
+      "on_time_shipments": 473
+    },
+    {
+      "name": "Golf Apparel",
+      "shipments": 429,
+      "late_shipments": 229,
+      "on_time_shipments": 200
+    },
+    {
+      "name": "Golf Bags & Carts",
+      "shipments": 61,
+      "late_shipments": 42,
+      "on_time_shipments": 19
+    },
+    {
+      "name": "Golf Balls",
+      "shipments": 1403,
+      "late_shipments": 805,
+      "on_time_shipments": 598
+    },
+    {
+      "name": "Golf Gloves",
+      "shipments": 1029,
+      "late_shipments": 602,
+      "on_time_shipments": 427
+    },
+    {
+      "name": "Golf Shoes",
+      "shipments": 502,
+      "late_shipments": 291,
+      "on_time_shipments": 211
+    },
+    {
+      "name": "Health and Beauty",
+      "shipments": 346,
+      "late_shipments": 202,
+      "on_time_shipments": 144
+    },
+    {
+      "name": "Hockey",
+      "shipments": 588,
+      "late_shipments": 329,
+      "on_time_shipments": 259
+    },
+    {
+      "name": "Hunting & Shooting",
+      "shipments": 424,
+      "late_shipments": 247,
+      "on_time_shipments": 177
+    },
+    {
+      "name": "Indoor/Outdoor Games",
+      "shipments": 18470,
+      "late_shipments": 10565,
+      "on_time_shipments": 7905
+    },
+    {
+      "name": "Kids' Golf Clubs",
+      "shipments": 356,
+      "late_shipments": 205,
+      "on_time_shipments": 151
+    },
+    {
+      "name": "Lacrosse",
+      "shipments": 329,
+      "late_shipments": 206,
+      "on_time_shipments": 123
+    },
+    {
+      "name": "Men's Clothing",
+      "shipments": 198,
+      "late_shipments": 113,
+      "on_time_shipments": 85
+    },
+    {
+      "name": "Men's Footwear",
+      "shipments": 21263,
+      "late_shipments": 12121,
+      "on_time_shipments": 9142
+    },
+    {
+      "name": "Men's Golf Clubs",
+      "shipments": 274,
+      "late_shipments": 135,
+      "on_time_shipments": 139
+    },
+    {
+      "name": "Music",
+      "shipments": 417,
+      "late_shipments": 248,
+      "on_time_shipments": 169
+    },
+    {
+      "name": "Pet Supplies",
+      "shipments": 472,
+      "late_shipments": 290,
+      "on_time_shipments": 182
+    },
+    {
+      "name": "Shop By Sport",
+      "shipments": 10515,
+      "late_shipments": 6058,
+      "on_time_shipments": 4457
+    },
+    {
+      "name": "Soccer",
+      "shipments": 136,
+      "late_shipments": 75,
+      "on_time_shipments": 61
+    },
+    {
+      "name": "Sporting Goods",
+      "shipments": 336,
+      "late_shipments": 198,
+      "on_time_shipments": 138
+    },
+    {
+      "name": "Strength Training",
+      "shipments": 109,
+      "late_shipments": 64,
+      "on_time_shipments": 45
+    },
+    {
+      "name": "Tennis & Racquet",
+      "shipments": 314,
+      "late_shipments": 183,
+      "on_time_shipments": 131
+    },
+    {
+      "name": "Toys",
+      "shipments": 507,
+      "late_shipments": 291,
+      "on_time_shipments": 216
+    },
+    {
+      "name": "Trade-In",
+      "shipments": 926,
+      "late_shipments": 542,
+      "on_time_shipments": 384
+    },
+    {
+      "name": "Video Games",
+      "shipments": 804,
+      "late_shipments": 455,
+      "on_time_shipments": 349
+    },
+    {
+      "name": "Water Sports",
+      "shipments": 14880,
+      "late_shipments": 8517,
+      "on_time_shipments": 6363
+    },
+    {
+      "name": "Women's Apparel",
+      "shipments": 20116,
+      "late_shipments": 11476,
+      "on_time_shipments": 8640
+    },
+    {
+      "name": "Women's Clothing",
+      "shipments": 631,
+      "late_shipments": 367,
+      "on_time_shipments": 264
+    },
+    {
+      "name": "Women's Golf Clubs",
+      "shipments": 170,
+      "late_shipments": 97,
+      "on_time_shipments": 73
+    }
+  ],
+  "department_name": [
+    {
+      "name": "Apparel",
+      "shipments": 46884,
+      "late_shipments": 26825,
+      "on_time_shipments": 20059
+    },
+    {
+      "name": "Book Shop",
+      "shipments": 391,
+      "late_shipments": 229,
+      "on_time_shipments": 162
+    },
+    {
+      "name": "Discs Shop",
+      "shipments": 1943,
+      "late_shipments": 1103,
+      "on_time_shipments": 840
+    },
+    {
+      "name": "Fan Shop",
+      "shipments": 64033,
+      "late_shipments": 36623,
+      "on_time_shipments": 27410
+    },
+    {
+      "name": "Fitness",
+      "shipments": 2374,
+      "late_shipments": 1377,
+      "on_time_shipments": 997
+    },
+    {
+      "name": "Footwear",
+      "shipments": 13891,
+      "late_shipments": 7949,
+      "on_time_shipments": 5942
+    },
+    {
+      "name": "Golf",
+      "shipments": 31768,
+      "late_shipments": 18198,
+      "on_time_shipments": 13570
+    },
+    {
+      "name": "Health and Beauty",
+      "shipments": 346,
+      "late_shipments": 202,
+      "on_time_shipments": 144
+    },
+    {
+      "name": "Outdoors",
+      "shipments": 9267,
+      "late_shipments": 5375,
+      "on_time_shipments": 3892
+    },
+    {
+      "name": "Pet Shop",
+      "shipments": 472,
+      "late_shipments": 290,
+      "on_time_shipments": 182
+    },
+    {
+      "name": "Technology",
+      "shipments": 1396,
+      "late_shipments": 806,
+      "on_time_shipments": 590
+    }
+  ]
+}

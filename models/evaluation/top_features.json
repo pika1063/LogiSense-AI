@@ -1,0 +1,82 @@
+[
+  {
+    "feature": "Days for shipment (scheduled)",
+    "importance": 0.22730833930537733
+  },
+  {
+    "feature": "Shipping Mode_Standard Class",
+    "importance": 0.18854951008476237
+  },
+  {
+    "feature": "Shipping Mode_Second Class",
+    "importance": 0.04238451126902728
+  },
+  {
+    "feature": "Customer Segment_Home Office",
+    "importance": 0.0355926820528282
+  },
+  {
+    "feature": "Customer Segment_Corporate",
+    "importance": 0.034384135100333016
+  },
+  {
+    "feature": "Shipping Mode_Same Day",
+    "importance": 0.0339710823161215
+  },
+  {
+    "feature": "Customer State_PR",
+    "importance": 0.013270175182926194
+  },
+  {
+    "feature": "Customer State_CA",
+    "importance": 0.010537359159225887
+  },
+  {
+    "feature": "Category Name_Cleats",
+    "importance": 0.009834062230611507
+  },
+  {
+    "feature": "Customer State_NY",
+    "importance": 0.00948130037872031
+  },
+  {
+    "feature": "Category Name_Men's Footwear",
+    "importance": 0.009391508694284966
+  },
+  {
+    "feature": "Category Name_Indoor/Outdoor Games",
+    "importance": 0.009317862973764768
+  },
+  {
+    "feature": "Category Name_Water Sports",
+    "importance": 0.00853395199599025
+  },
+  {
+    "feature": "Customer State_TX",
+    "importance": 0.008502927794513336
+  },
+  {
+    "feature": "Department Name_Fan Shop",
+    "importance": 0.008499310927106984
+  },
+  {
+    "feature": "Category Name_Fishing",
+    "importance": 0.008375457489701425
+  },
+  {
+    "feature": "Category Name_Camping & Hiking",
+    "importance": 0.00809018284463381
+  },
+  {
+    "feature": "Customer State_FL",
+    "importance": 0.007191164708183974
+  },
+  {
+    "feature": "Customer State_IL",
+    "importance": 0.007165359937323831
+  },
+  {
+    "feature": "Customer State_OH",
+    "importance": 0.006921147763064853
+  }
+]

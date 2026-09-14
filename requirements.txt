@@ -1,0 +1,25 @@
+# LogiSense-AI - Python dependencies
+# Install with:  python -m pip install -r requirements.txt
+
+# --- Data handling ---
+pandas>=2.2
+numpy>=1.26
+
+# --- Machine learning ---
+scikit-learn>=1.4
+xgboost>=2.0
+joblib>=1.3
+
+# --- API backend (used later for the FastAPI service) ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+
+# --- Exploration / notebook tooling ---
+matplotlib>=3.8
+seaborn>=0.13
+nbformat>=5.10
+nbclient>=0.10
+ipykernel>=6.29
+
+# NOTE: model training happens in a later phase; xgboost/fastapi/uvicorn are
+# listed now so the full stack can be installed in one go.

@@ -1,0 +1,47 @@
+{
+  "raw_rows": 172765,
+  "n_features": 136,
+  "train_size": 138212,
+  "test_size": 34553,
+  "train_class_counts": {
+    "1": 79182,
+    "0": 59030
+  },
+  "test_class_counts": {
+    "1": 19795,
+    "0": 14758
+  },
+  "late_rate_train": 0.5729,
+  "late_rate_test": 0.5729,
+  "random_state": 42,
+  "excluded_leakage_columns": [
+    "Benefit per order",
+    "Customer City",
+    "Customer Country",
+    "Customer Fname",
+    "Customer Id",
+    "Customer Lname",
+    "Customer Street",
+    "Customer Zipcode",
+    "Days for shipping (real)",
+    "Delivery Status",
+    "Latitude",
+    "Longitude",
+    "Order City",
+    "Order Country",
+    "Order Customer Id",
+    "Order Item Discount",
+    "Order Item Discount Rate",
+    "Order Item Product Price",
+    "Order Item Profit Ratio",
+    "Order Item Quantity",
+    "Order Item Total",
+    "Order Profit Per Order",
+    "Order Status",
+    "Product Name",
+    "Product Price",
+    "Sales",
+    "Sales per customer",
+    "Type"
+  ]
+}

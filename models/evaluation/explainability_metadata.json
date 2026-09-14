@@ -1,0 +1,6 @@
+{
+  "model": "RandomForestClassifier",
+  "method": "Random Forest feature_importances_",
+  "total_features": 136,
+  "top_features_saved": 20
+}
