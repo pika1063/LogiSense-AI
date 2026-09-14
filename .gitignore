@@ -17,3 +17,8 @@ frontend/dist/
 Thumbs.db
 test_api.py
 *.log
+
+# Large generated ML files
+models/*.joblib
+data/processed/*.csv
+data/raw/*.csv
