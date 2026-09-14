@@ -2243,7 +2243,7 @@ select:focus-visible {
 
   font-size: 0.49rem;
 
-  font-weight: 800;
+  font-weight: 600;
 
   letter-spacing: 0.11em;
 }
@@ -3631,7 +3631,7 @@ select:focus-visible {
 
   font-size: 0.52rem;
 
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .risk-badge i {
@@ -3840,7 +3840,7 @@ select:focus-visible {
 
   font-size: 0.49rem;
 
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .performance-values {
@@ -3874,7 +3874,7 @@ select:focus-visible {
 
   font-size: 0.47rem;
 
-  font-weight: 800;
+  font-weight: 600;
 
   letter-spacing: 0.08em;
 }
@@ -5342,7 +5342,7 @@ select:focus-visible {
   font-size:
     0.48rem;
 
-  font-weight: 800;
+  font-weight: 600;
 
   letter-spacing:
     0.08em;
@@ -5434,7 +5434,7 @@ select:focus-visible {
   font-size:
     0.49rem;
 
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .shipment-risk i {
@@ -6393,3 +6393,129 @@ select:focus-visible {
       1fr;
   }
 }
+/* =========================================================
+   HERO TYPOGRAPHY — CLEANER & MORE READABLE
+   ========================================================= */
+
+.hero h1,
+.hero-title,
+.hero-heading,
+.hero-content h1,
+.hero-copy h1 {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 0.98 !important;
+  text-transform: none !important;
+  text-shadow: none !important;
+}
+
+.hero h1 strong,
+.hero-title strong,
+.hero-heading strong,
+.hero-content h1 strong,
+.hero-copy h1 strong {
+  font-weight: 500 !important;
+}
+
+
+/* =========================================================
+   GLOBAL TYPOGRAPHY — CLEAN PROFESSIONAL STYLE
+   ========================================================= */
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif !important;
+}
+
+/* Main section headings */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif !important;
+  letter-spacing: -0.025em !important;
+}
+
+/* Large / hero headings */
+h1 {
+  font-weight: 600 !important;
+}
+
+/* Section headings */
+h2 {
+  font-weight: 600 !important;
+}
+
+/* Card headings */
+h3,
+h4 {
+  font-weight: 600 !important;
+}
+
+/* Supporting text */
+p,
+.subtitle,
+.description,
+.section-heading p,
+.analytics-card p {
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  line-height: 1.55 !important;
+}
+
+/* Navigation */
+.nav-link,
+.nav-item,
+nav button {
+  font-weight: 500 !important;
+}
+
+/* Buttons */
+button {
+  font-weight: 500 !important;
+  letter-spacing: 0 !important;
+}
+
+/* Labels / small UI text */
+.section-label,
+.eyebrow,
+.kpi-label,
+.badge,
+.meta-label {
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+}
+
+/* KPI numbers */
+.kpi-value,
+.metric-value {
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+
+/* Analytics values */
+.analytics-value,
+.chart-value,
+.stat-value {
+  font-weight: 600 !important;
+}
+
+/* Tables */
+table th {
+  font-weight: 600 !important;
+}
+
+table td {
+  font-weight: 400 !important;
+}
+
+/* Don't allow inherited ultra-heavy weights */
+strong,
+b {
+  font-weight: 600 !important;
+}
+
