@@ -32,7 +32,7 @@ PROCESSED_DIR = PROJECT_ROOT / "data" / "processed"
 # ==========================================================
 
 BEST_MODEL_PATH = (
-    MODELS_DIR / "best_model.joblib"
+    MODELS_DIR / "xgboost.joblib"
 )
 
 PREPROCESSOR_PATH = (

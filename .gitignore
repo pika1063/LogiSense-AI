@@ -21,3 +21,7 @@ Thumbs.db
 models/*.joblib
 data/processed/*.csv
 data/raw/*.csv
+
+!models/best_model.joblib
+
+!models/xgboost.joblib
