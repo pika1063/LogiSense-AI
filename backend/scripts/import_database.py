@@ -114,6 +114,19 @@ def main():
                 f"| Total: {total_rows:,}"
             )
 
+        # ------------------------------------------------
+        # Create indexes for optimal query performance
+        # ------------------------------------------------
+        indexes = [
+            'CREATE INDEX IF NOT EXISTS idx_shipments_late_risk ON shipments ("Late_delivery_risk")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_shipping_mode ON shipments ("Shipping Mode")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_market ON shipments ("Market")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_order_region ON shipments ("Order Region")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_customer_segment ON shipments ("Customer Segment")',
+        ]
+        for query in indexes:
+            connection.execute(query)
+
         connection.commit()
 
     finally:
@@ -137,5 +150,27 @@ def main():
     )
 
 
+def create_indexes():
+    """Create indexes on existing database without full re-import."""
+    if not DB_PATH.exists():
+        print(f"Database not found: {DB_PATH}")
+        return
+    connection = sqlite3.connect(DB_PATH)
+    try:
+        indexes = [
+            'CREATE INDEX IF NOT EXISTS idx_shipments_late_risk ON shipments ("Late_delivery_risk")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_shipping_mode ON shipments ("Shipping Mode")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_market ON shipments ("Market")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_order_region ON shipments ("Order Region")',
+            'CREATE INDEX IF NOT EXISTS idx_shipments_customer_segment ON shipments ("Customer Segment")',
+        ]
+        for query in indexes:
+            connection.execute(query)
+        connection.commit()
+        print("Indexes created successfully on shipments table.")
+    finally:
+        connection.close()
+
+
 if __name__ == "__main__":
-    main()
+    main()

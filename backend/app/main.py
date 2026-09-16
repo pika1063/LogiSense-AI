@@ -1,5 +1,7 @@
 from pathlib import Path
 import json
+import os
+import logging
 
 import pandas as pd
 import joblib
@@ -9,6 +11,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
 from backend.app.database import get_connection
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger("logisense")
 
 
 # ==========================================================
@@ -78,28 +83,32 @@ def load_json(path: Path, default):
                 encoding="utf-8"
             ) as file:
                 return json.load(file)
-    except Exception:
-        pass
+    except Exception as err:
+        logger.warning(f"Could not load JSON from {path}: {err}")
 
     return default
 
 
 try:
-    model = joblib.load(
-        BEST_MODEL_PATH
-    )
+    if BEST_MODEL_PATH.exists():
+        model = joblib.load(
+            BEST_MODEL_PATH
+        )
+        logger.info(f"Loaded model: {type(model).__name__}")
 except Exception as error:
-    print(
+    logger.warning(
         f"Warning: Could not load model: {error}"
     )
 
 
 try:
-    preprocessor = joblib.load(
-        PREPROCESSOR_PATH
-    )
+    if PREPROCESSOR_PATH.exists():
+        preprocessor = joblib.load(
+            PREPROCESSOR_PATH
+        )
+        logger.info("Loaded preprocessing pipeline successfully")
 except Exception as error:
-    print(
+    logger.warning(
         f"Warning: Could not load preprocessor: {error}"
     )
 
@@ -138,26 +147,30 @@ app = FastAPI(
     title="LogiSense AI API",
     description=(
         "Delivery performance, delay risk "
-        "and logistics efficiency API."
+        "and logistics efficiency intelligence API."
     ),
     version="1.0.0"
 )
 
 
 # ==========================================================
-# CORS
+# CORS CONFIGURATION
 # ==========================================================
+
+raw_cors = os.getenv(
+    "CORS_ORIGINS",
+    "http://localhost:5173,http://127.0.0.1:5173,http://localhost:3000,http://127.0.0.1:3000,http://localhost:80,http://127.0.0.1:80"
+)
+allowed_origins = [origin.strip() for origin in raw_cors.split(",") if origin.strip()]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-    ],
+    allow_origins=allowed_origins if allowed_origins else ["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 
 # ==========================================================
@@ -167,22 +180,53 @@ app.add_middleware(
 class ShipmentInput(BaseModel):
     days_for_shipment_scheduled: int = Field(
         ...,
-        ge=0
+        ge=0,
+        le=60,
+        description="Promised/scheduled days for shipment fulfillment",
+        json_schema_extra={"example": 3}
     )
 
-    shipping_mode: str
+    shipping_mode: str = Field(
+        ...,
+        description="Logistics service tier: Standard Class, Second Class, First Class, Same Day",
+        json_schema_extra={"example": "Standard Class"}
+    )
 
-    market: str
+    market: str = Field(
+        ...,
+        description="Destination market region: USCA, LATAM, Europe, Pacific Asia, Africa",
+        json_schema_extra={"example": "USCA"}
+    )
 
-    order_region: str
+    order_region: str = Field(
+        ...,
+        description="Operating region (e.g. Western US, Central America, Western Europe)",
+        json_schema_extra={"example": "Western US"}
+    )
 
-    customer_segment: str
+    customer_segment: str = Field(
+        ...,
+        description="Customer tier: Consumer, Corporate, Home Office",
+        json_schema_extra={"example": "Consumer"}
+    )
 
-    customer_state: str
+    customer_state: str = Field(
+        ...,
+        description="US state or regional identifier (e.g. CA, NY, TX, PR)",
+        json_schema_extra={"example": "CA"}
+    )
 
-    category_name: str
+    category_name: str = Field(
+        ...,
+        description="Merchandise product category",
+        json_schema_extra={"example": "Cleats"}
+    )
 
-    department_name: str
+    department_name: str = Field(
+        ...,
+        description="Department classification",
+        json_schema_extra={"example": "Outdoors"}
+    )
 
 
 # ==========================================================
@@ -328,15 +372,13 @@ def predict(
             dataframe
         )
 
-        prediction = int(
-            model.predict(transformed)[0]
-        )
-
-        probabilities = (
-            model.predict_proba(
-                transformed
-            )[0]
-        )
+        if feature_names and hasattr(transformed, "shape") and transformed.shape[1] == len(feature_names):
+            transformed_df = pd.DataFrame(transformed, columns=feature_names)
+            prediction = int(model.predict(transformed_df)[0])
+            probabilities = model.predict_proba(transformed_df)[0]
+        else:
+            prediction = int(model.predict(transformed)[0])
+            probabilities = model.predict_proba(transformed)[0]
 
         delay_probability = float(
             probabilities[1] * 100
@@ -502,6 +544,7 @@ def get_shipments(
 
 @app.get("/shipments/search")
 def search_shipments(
+    q: str | None = None,
     shipping_mode: str | None = None,
     market: str | None = None,
     customer_segment: str | None = None,
@@ -515,6 +558,10 @@ def search_shipments(
         20,
         ge=1,
         le=100
+    ),
+    offset: int = Query(
+        0,
+        ge=0
     )
 ):
     try:
@@ -527,6 +574,22 @@ def search_shipments(
         """
 
         parameters = []
+
+        if q and q.strip():
+            term = f"%{q.strip()}%"
+            query += """
+                AND (
+                    CAST("Order Id" AS TEXT) LIKE ?
+                    OR "Shipping Mode" LIKE ?
+                    OR "Market" LIKE ?
+                    OR "Order Region" LIKE ?
+                    OR "Customer Segment" LIKE ?
+                    OR "Customer State" LIKE ?
+                    OR "Category Name" LIKE ?
+                    OR "Department Name" LIKE ?
+                )
+            """
+            parameters.extend([term] * 8)
 
         if shipping_mode:
             query += """
@@ -575,9 +638,11 @@ def search_shipments(
 
         query += """
             LIMIT ?
+            OFFSET ?
         """
 
         parameters.append(limit)
+        parameters.append(offset)
 
         rows = connection.execute(
             query,
@@ -593,6 +658,8 @@ def search_shipments(
 
         return {
             "count": len(shipments),
+            "limit": limit,
+            "offset": offset,
             "shipments": shipments
         }
 
@@ -803,18 +870,22 @@ def shipments_by_market():
             )
         )
 # ==========================================================
-# DATABASE — CARRIER / SHIPPING PERFORMANCE
+# DATABASE — SHIPPING MODE PERFORMANCE
 # ==========================================================
 
 @app.get("/shipments/by-carrier")
 def shipments_by_carrier():
+    """
+    Returns delivery performance aggregated by Shipping Mode.
+    Note: The dataset categorizes logistics tiers by Shipping Mode (Standard, Second, First, Same Day).
+    """
     try:
         connection = get_connection()
 
         rows = connection.execute(
             """
             SELECT
-                "Shipping Mode" AS carrier,
+                "Shipping Mode" AS shipping_mode,
                 COUNT(*) AS shipments,
                 SUM(
                     CASE
@@ -846,7 +917,8 @@ def shipments_by_carrier():
             )
 
             result.append({
-                "carrier": row["carrier"],
+                "shipping_mode": row["shipping_mode"],
+                "carrier": row["shipping_mode"],
                 "shipments": shipments,
                 "late_shipments": late_shipments,
                 "late_rate": round(late_rate, 2)

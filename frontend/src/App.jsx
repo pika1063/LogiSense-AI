@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 const THEMES = {
   midnight: {
@@ -22,12 +22,13 @@ const DEFAULT_FORM = {
   days_for_shipment_scheduled: 3,
   shipping_mode: "Standard Class",
   market: "USCA",
-  order_region: "Western US",
+  order_region: "West of USA",
   customer_segment: "Consumer",
   customer_state: "CA",
   category_name: "Cleats",
   department_name: "Outdoors",
 };
+
 
 
 /* ==========================================================
@@ -2870,7 +2871,7 @@ function App() {
                     onChange={
                       handleChange
                     }
-                    placeholder="Western US"
+                    placeholder="West of USA"
                     required
                   />
 

@@ -5442,6 +5442,7 @@ select:focus-visible {
   height: 5px;
 
   border-radius: 50%;
+python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
 
   background: currentColor;
 }
@@ -5571,7 +5572,7 @@ select:focus-visible {
 
 
 /* ==========================================================
-   LIGHT THEME — SHIPMENTS
+   LIGHT THEME â€” SHIPMENTS
    ========================================================== */
 
 :root[data-theme="light"] .shipment-toolbar,
@@ -6394,7 +6395,7 @@ select:focus-visible {
   }
 }
 /* =========================================================
-   HERO TYPOGRAPHY � CLEANER & MORE READABLE
+   HERO TYPOGRAPHY — CLEANER & MORE READABLE
    ========================================================= */
 
 .hero h1,
@@ -6420,7 +6421,7 @@ select:focus-visible {
 
 
 /* =========================================================
-   GLOBAL TYPOGRAPHY � CLEAN PROFESSIONAL STYLE
+   GLOBAL TYPOGRAPHY — CLEAN PROFESSIONAL STYLE
    ========================================================= */
 
 body,

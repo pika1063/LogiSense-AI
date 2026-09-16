@@ -15,7 +15,6 @@ frontend/dist/
 .idea/
 .DS_Store
 Thumbs.db
-test_api.py
 *.log
 
 # Large generated ML files
