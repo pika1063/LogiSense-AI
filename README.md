@@ -68,38 +68,35 @@ To guarantee real-world integrity, post-delivery and outcome attributes are stri
 
 ---
 
-## Quick Start
+## Quick Start (How to Run Locally)
 
-### 1. Run with Docker Compose (Recommended)
+> **Note:** The links below (localhost) are accessed in your browser **after** you start the backend and frontend servers using either Docker or Python/Node.
+
+### Option 1: Run with Docker Compose (Single Command)
 `ash
 docker-compose up --build
 `
-- Frontend: [http://localhost:3000](http://localhost:3000)
-- Backend API Docs: [http://localhost:8000/docs](http://localhost:8000/docs)
+Once started, open in your browser:
+* **Web Dashboard**: http://localhost:3000
+* **Interactive API Swagger Docs**: http://localhost:8000/docs
 
 ---
 
-### 2. Local Development
+### Option 2: Run with Python & Vite
 
-#### Backend Setup
+#### Step 1: Start the Backend (Terminal 1)
 `ash
-# Create virtual environment
-python -m venv venv
-venv\Scripts\activate  # Windows (or source venv/bin/activate on Linux/Mac)
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Start FastAPI server
 python -m uvicorn backend.app.main:app --reload --host 127.0.0.1 --port 8000
 `
+* Interactive API Documentation will be live at: **http://127.0.0.1:8000/docs**
 
-#### Frontend Setup
+#### Step 2: Start the Frontend (Terminal 2)
 `ash
 cd frontend
 npm install
 npm run dev
 `
+* The Web Dashboard will be live at: **http://localhost:5173**
 
 ---
 
