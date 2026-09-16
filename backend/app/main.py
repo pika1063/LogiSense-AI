@@ -292,15 +292,41 @@ def calculate_risk(probability: float):
 
 
 # ==========================================================
-# BASIC ENDPOINT
+# STATIC FILES / FRONTEND MOUNTING
+# ==========================================================
+
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
+
+DIST_DIR = PROJECT_ROOT / "frontend" / "dist"
+ASSETS_DIR = DIST_DIR / "assets"
+
+if ASSETS_DIR.exists():
+    app.mount("/assets", StaticFiles(directory=str(ASSETS_DIR)), name="assets")
+
+
+# ==========================================================
+# BASIC / ROOT ENDPOINT
 # ==========================================================
 
 @app.get("/")
 def root():
+    index_file = DIST_DIR / "index.html"
+    if index_file.exists():
+        return FileResponse(str(index_file))
     return {
         "message": "LogiSense AI API is running",
         "status": "healthy"
     }
+
+
+@app.get("/api/status")
+def api_status():
+    return {
+        "message": "LogiSense AI API is running",
+        "status": "healthy"
+    }
+
 
 
 # ==========================================================

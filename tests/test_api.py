@@ -7,9 +7,15 @@ client = TestClient(app)
 def test_root():
     response = client.get("/")
     assert response.status_code == 200
+
+
+def test_api_status():
+    response = client.get("/api/status")
+    assert response.status_code == 200
     data = response.json()
     assert "status" in data
     assert data["status"] == "healthy"
+
 
 
 def test_health():
