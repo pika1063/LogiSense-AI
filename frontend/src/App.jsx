@@ -1686,7 +1686,7 @@ function App() {
             icon="✦"
             value="69.08%"
             label="MODEL F1"
-            note="Selected Random Forest"
+            note="Selected XGBoost"
           />
 
 
@@ -2716,7 +2716,7 @@ function App() {
 
               <span></span>
 
-              RANDOM FOREST
+              XGBOOST
 
             </div>
 
@@ -3159,7 +3159,7 @@ function App() {
                       </span>
 
                       <strong>
-                        Random Forest
+                        XGBOOST
                       </strong>
 
                     </div>
@@ -3237,7 +3237,7 @@ function App() {
 
               <span></span>
 
-              RANDOM FOREST
+               XGBOOST
 
             </div>
 
@@ -3279,7 +3279,7 @@ function App() {
                   </span>
 
                   <strong>
-                    69.21%
+                    70.27%
                   </strong>
 
                 </div>
@@ -3292,7 +3292,7 @@ function App() {
                   </span>
 
                   <strong>
-                    69.08%
+                    68.90%
                   </strong>
 
                 </div>
@@ -3305,7 +3305,7 @@ function App() {
                   </span>
 
                   <strong>
-                    75.47%
+                    76.24%
                   </strong>
 
                 </div>
@@ -3320,7 +3320,7 @@ function App() {
                 </strong>
 
                 <p>
-                  Random Forest achieved the
+                  XGBoost achieved the
                   strongest F1 score among the
                   trained models, with ROC-AUC
                   used as a supporting criterion.
@@ -3347,7 +3347,7 @@ function App() {
 
                   <p>
                     Most influential features in
-                    the selected Random Forest.
+                    the selected XGBoost model.
                   </p>
 
                 </div>
