@@ -1684,7 +1684,7 @@ function App() {
 
           <KpiCard
             icon="✦"
-            value="69.08%"
+            value="68.90%"
             label="MODEL F1"
             note="Selected XGBoost"
           />
