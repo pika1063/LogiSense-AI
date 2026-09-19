@@ -1,82 +1,82 @@
 [
   {
-    "feature": "Days for shipment (scheduled)",
-    "importance": 0.22730833930537733
-  },
-  {
     "feature": "Shipping Mode_Standard Class",
-    "importance": 0.18854951008476237
+    "importance": 0.356559693813324
   },
   {
-    "feature": "Shipping Mode_Second Class",
-    "importance": 0.04238451126902728
-  },
-  {
-    "feature": "Customer Segment_Home Office",
-    "importance": 0.0355926820528282
-  },
-  {
-    "feature": "Customer Segment_Corporate",
-    "importance": 0.034384135100333016
+    "feature": "Days for shipment (scheduled)",
+    "importance": 0.20871613919734955
   },
   {
     "feature": "Shipping Mode_Same Day",
-    "importance": 0.0339710823161215
+    "importance": 0.12655159831047058
   },
   {
-    "feature": "Customer State_PR",
-    "importance": 0.013270175182926194
+    "feature": "Shipping Mode_Second Class",
+    "importance": 0.020723415538668633
   },
   {
-    "feature": "Customer State_CA",
-    "importance": 0.010537359159225887
+    "feature": "Customer State_CO",
+    "importance": 0.003967379219830036
   },
   {
-    "feature": "Category Name_Cleats",
-    "importance": 0.009834062230611507
+    "feature": "Department Name_Book Shop",
+    "importance": 0.003866385668516159
   },
   {
-    "feature": "Customer State_NY",
-    "importance": 0.00948130037872031
+    "feature": "Customer State_HI",
+    "importance": 0.003853998612612486
   },
   {
-    "feature": "Category Name_Men's Footwear",
-    "importance": 0.009391508694284966
+    "feature": "Order Region_West Asia",
+    "importance": 0.0036245191004127264
   },
   {
-    "feature": "Category Name_Indoor/Outdoor Games",
-    "importance": 0.009317862973764768
+    "feature": "Customer State_TN",
+    "importance": 0.003587019396945834
   },
   {
-    "feature": "Category Name_Water Sports",
-    "importance": 0.00853395199599025
+    "feature": "Order Region_North Africa",
+    "importance": 0.0035260426811873913
   },
   {
-    "feature": "Customer State_TX",
-    "importance": 0.008502927794513336
+    "feature": "Category Name_Books",
+    "importance": 0.0035122528206557035
   },
   {
-    "feature": "Department Name_Fan Shop",
-    "importance": 0.008499310927106984
+    "feature": "Customer State_MD",
+    "importance": 0.0034935912117362022
   },
   {
-    "feature": "Category Name_Fishing",
-    "importance": 0.008375457489701425
+    "feature": "Customer State_UT",
+    "importance": 0.0034643288236111403
   },
   {
-    "feature": "Category Name_Camping & Hiking",
-    "importance": 0.00809018284463381
+    "feature": "Order Region_West of USA",
+    "importance": 0.003322700969874859
   },
   {
-    "feature": "Customer State_FL",
-    "importance": 0.007191164708183974
+    "feature": "Order Region_West Africa",
+    "importance": 0.0032382365316152573
   },
   {
-    "feature": "Customer State_IL",
-    "importance": 0.007165359937323831
+    "feature": "Customer State_WA",
+    "importance": 0.0032365270890295506
   },
   {
-    "feature": "Customer State_OH",
-    "importance": 0.006921147763064853
+    "feature": "Order Region_US Center",
+    "importance": 0.0032166338060051203
+  },
+  {
+    "feature": "Order Region_Central Africa",
+    "importance": 0.0031319051049649715
+  },
+  {
+    "feature": "Order Region_South Asia",
+    "importance": 0.0030776739586144686
+  },
+  {
+    "feature": "Customer State_MO",
+    "importance": 0.0030760529916733503
   }
 ]
